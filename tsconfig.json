@@ -1,0 +1,113 @@
+{
+  "compilerOptions": {
+    // Target ES2020 for better async/await and optional chaining support
+    "target": "ES2020",
+
+    // Use ESNext for modern module system with tree-shaking support
+    "module": "ESNext",
+
+    // Include necessary libraries for React and modern JS features
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
+
+    // React 17+ JSX transform
+    "jsx": "react-jsx",
+
+    // Module resolution strategy
+    "moduleResolution": "Node",
+
+    // Enable interoperability between CommonJS and ES modules
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // Skip type checking of declaration files for faster builds
+    "skipLibCheck": true,
+
+    // Generate declaration files (.d.ts) for TypeScript consumers
+    "declaration": true,
+    "declarationMap": true,
+
+    // Generate source maps for better debugging experience
+    "sourceMap": true,
+
+    // Output directory for compiled files
+    "outDir": "dist",
+
+    // Root directory for source files
+    "rootDir": "src",
+
+    // Strict type checking options
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Additional checks for better code quality
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+
+    // Module detection and resolution
+    "moduleDetection": "force",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    // Emit options for npm package
+    "removeComments": false,
+    "preserveConstEnums": true,
+
+    // Path mapping for internal imports (if needed)
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    // Ensure compatibility with bundlers
+    "allowImportingTsExtensions": false,
+    "noEmit": false,
+
+    // For better npm package compatibility
+    "forceConsistentCasingInFileNames": true
+  },
+
+  // Include source files
+  "include": [
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+
+  // Exclude unnecessary files from compilation
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "coverage",
+    "jest.config.*",
+    "rollup.config.*",
+    "webpack.config.*",
+    "vite.config.*",
+    "*.config.js",
+    "*.config.ts"
+  ],
+
+  // TypeScript project references (if using monorepo)
+  "references": [],
+
+  // Watch options for development
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["**/node_modules", "**/dist"]
+  },
+
+  // Compiler diagnostics
+  "compileOnSave": false
+}

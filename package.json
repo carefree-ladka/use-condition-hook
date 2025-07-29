@@ -1,0 +1,179 @@
+{
+  "name": "use-condition-hook",
+  "version": "1.0.0",
+  "description": "A React hook for declarative conditional rendering with fluent API. Provides clean, chainable syntax for complex conditional rendering scenarios with support for boolean conditions, value-based matching, and custom comparators.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:tsc": "tsc",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run type-check && npm run build",
+    "clean": "rimraf dist",
+    "size": "bundlesize"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "conditional",
+    "rendering",
+    "react-hook",
+    "conditional-rendering",
+    "declarative",
+    "fluent-api",
+    "typescript",
+    "jsx",
+    "component",
+    "switch",
+    "case",
+    "when",
+    "then",
+    "match"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "url": "https://github.com/carefree-ladka"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carefree-ladka/use-condition-hook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carefree-ladka/use-condition-hook/issues"
+  },
+  "homepage": "https://github.com/carefree-ladka/use-condition-hook#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/react": "^19.1.8",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "bundlesize": "^0.18.2",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.2.5",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/index.js",
+      "maxSize": "5 kB"
+    },
+    {
+      "path": "./dist/index.esm.js",
+      "maxSize": "5 kB"
+    }
+  ],
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "dts": true,
+    "sourcemap": true,
+    "clean": true,
+    "minify": true,
+    "target": "es2020",
+    "splitting": false,
+    "treeshake": true,
+    "external": [
+      "react"
+    ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.(ts|tsx)",
+      "<rootDir>/src/**/?(*.)(test|spec).(ts|tsx)"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.(ts|tsx)",
+      "!src/**/*.d.ts",
+      "!src/index.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "react",
+      "react-hooks"
+    ],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0"
+  }
+}
