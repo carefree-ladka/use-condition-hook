@@ -655,7 +655,7 @@ npm run test:coverage # Run tests with coverage
 
 ## 📄 License
 
-MIT © [Your Name](https://github.com/carefree-ladka)
+MIT © [Pawan Kumar](https://github.com/carefree-ladka)
 
 ## 🙏 Acknowledgments
 
