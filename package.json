@@ -1,6 +1,6 @@
 {
   "name": "use-condition-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React hook for declarative conditional rendering with fluent API. Provides clean, chainable syntax for complex conditional rendering scenarios with support for boolean conditions, value-based matching, and custom comparators.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
